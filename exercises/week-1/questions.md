@@ -33,5 +33,6 @@ You want to understand a paper on a new polynomial commitment scheme, but you’
 5. (b) Is your cipher implementation constant time?
 
 ### Extras
-- Read New Directions in Cryptography.
-- Consider ways to contribute what you learned this week to the Uncloak knowledge graph.
+
+- Read [New Directions in Cryptography](https://ieeexplore.ieee.org/document/1055638).
+- Consider ways to contribute what you learned this week to the [Uncloak](https://uncloak.org) knowledge graph.
