@@ -1,6 +1,7 @@
 # Week 1 Answers 
 
-### Ch 1: [from the CE text](https://drive.google.com/file/d/15csrrLC72dgFdCTxQ4FQBhHtRFDbLzkU/view?usp=share_link)
+### Ch 1:
+> [from the CE text](https://drive.google.com/file/d/15csrrLC72dgFdCTxQ4FQBhHtRFDbLzkU/view?usp=share_link)
 
 - Q10. Describe a concrete example where improving the security of a system against one type of attack can increase the likelihood of other attacks.
 	- This is more of an engineering question than a cryptograhy question per se; security versus performance, and security versus feature complexity are common recurring issue when designing a system. But to give a recent example, the SIKE key-encapsulation protocol was a finalist in the NIST Post Quantum cryptographic algorithm competition. The protocol made it through 5 years of analysis and 4 rounds of highly-public review, before finally revealing weaknesses in August 2022. New cryptographic algorithms may enable new use-cases, but sometimes come with poorly understood security assumptions, which can take years to discover. An engineer attempting to anticipate post-quantum security with a new algorithm increases their risk to not yet well-understood security risks.

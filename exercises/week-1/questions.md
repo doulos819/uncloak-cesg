@@ -1,6 +1,7 @@
 # Week 1 Questions
 
-### Ch 1: [from the CE text](https://drive.google.com/file/d/15csrrLC72dgFdCTxQ4FQBhHtRFDbLzkU/view?usp=share_link)
+### Ch 1:
+> [from the CE text](https://drive.google.com/file/d/15csrrLC72dgFdCTxQ4FQBhHtRFDbLzkU/view?usp=share_link)
 
 - Q10. Describe a concrete example where improving the security of a system against one type of attack can increase the likelihood of other attacks.
 
