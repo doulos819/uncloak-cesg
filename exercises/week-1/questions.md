@@ -16,7 +16,7 @@ https://cryptography.rs/
 https://lib.rs/ (librs is equivalent to crates.io, with a different interface)
 Benchmark the speed of an algorithm in the two different implementations with Criterion.
 
-2. You’re implementing a Tweakable Encryption scheme. You need to know what standard API users will expect. Find a reference for the standard API and write the function signatures for encryption and decryption.
+2. (depricated) You’re implementing a Tweakable Encryption scheme. You need to know what standard API users will expect. Find a reference for the standard API and write the function signatures for encryption and decryption.
 You want to understand a paper on a new polynomial commitment scheme, but you’ve been trying for more than an hour, and the math is over your head. What do you do?
 
 3. Implement the Vignère cipher in 100 lines or less.
