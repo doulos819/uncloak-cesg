@@ -43,6 +43,7 @@
 You want to understand a paper on a new polynomial commitment scheme, but you’ve been trying for more than an hour, and the math is over your head. What do you do?
 
 4. Implement the Vignère cipher in 100 lines or less.
+	- [Thor's Solution](https://github.com/thor314/uncloak-hw/tree/main/hw1)
 
 5. (a) What is a side channel attack?
 
