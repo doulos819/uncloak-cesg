@@ -1,6 +1,6 @@
 # Week 1 Answers 
 
-### Ch 1: 
+### Ch 1: [from the CE text](https://drive.google.com/file/d/15csrrLC72dgFdCTxQ4FQBhHtRFDbLzkU/view?usp=share_link)
 
 - Q10. Describe a concrete example where improving the security of a system against one type of attack can increase the likelihood of other attacks.
 	- This is more of an engineering question than a cryptograhy question per se; security versus performance, and security versus feature complexity are common recurring issue when designing a system. But to give a recent example, the SIKE key-encapsulation protocol was a finalist in the NIST Post Quantum cryptographic algorithm competition. The protocol made it through 5 years of analysis and 4 rounds of highly-public review, before finally revealing weaknesses in August 2022. New cryptographic algorithms may enable new use-cases, but sometimes come with poorly understood security assumptions, which can take years to discover. An engineer attempting to anticipate post-quantum security with a new algorithm increases their risk to not yet well-understood security risks.
@@ -8,7 +8,7 @@
 
 ### Ch 2:
 - Q3. Consider a group of 30 people who wish to establish pair-wise secure communications using symmetric-key cryptography. How many keys need to be exchanged in total.
-    - - 435 keys would need to be exchanged.($N(N-1)/2$)) where $N$ = 30. If you aren't familiar with this formula, try deriving it yourself, and proving it with induction. Look up the Handshake Lemma or [Triangular numbers](https://en.wikipedia.org/wiki/Triangular_number) for more details.
+    - 435 keys would need to be exchanged.($N(N-1)/2$)) where $N$ = 30. If you aren't familiar with this formula, try deriving it yourself, and proving it with induction. Look up the Handshake Lemma or [Triangular numbers](https://en.wikipedia.org/wiki/Triangular_number) for more details.
 
 - Q4. Suppose Bob receives a messages signed using a digital signature scheme with Alice’s secret signing key. Does it prove that Alice saw the message and chose to sign.
     - No,  $K_a$ is long and difficult to remember, much less compute with. If a malicious party takes over Alice's PC, they might be able to forge Alice's signature. 
@@ -48,8 +48,6 @@ You want to understand a paper on a new polynomial commitment scheme, but you’
 5. (a) What is a side channel attack?
 
 5. (b) Is your cipher implementation constant time?
-Extra: Read New Directions in Cryptography.
-Extra: Consider ways to contribute what you learned this week to the Uncloak knowledge graph.
 
 ### Extras
 
