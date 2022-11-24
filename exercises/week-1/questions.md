@@ -9,7 +9,7 @@
 
 - Q3. Consider a group of 30 people who wish to establish pair-wise secure communications using symmetric-key cryptography. How many keys need to be exchanged in total.
 
-- Q4. Suppose Bob receives a messages signed using a digital signature scheme with Alice’s secret signing key. Does it prove that Alice saw the message and chose to sign.
+- Q4. Suppose Bob receives a message signed using a digital signature scheme with Alice’s secret signing key. Does it prove that Alice saw the message and chose to sign.
 
 - Q6. Suppose a chosen-ciphertext attacker cannot recover the secret decryption key for an encryption scheme. Does this mean the encryption scheme is secure?
 

@@ -11,7 +11,7 @@
 - Q3. Consider a group of 30 people who wish to establish pair-wise secure communications using symmetric-key cryptography. How many keys need to be exchanged in total.
     - 435 keys would need to be exchanged.($N(N-1)/2$)) where $N$ = 30. If you aren't familiar with this formula, try deriving it yourself, and proving it with induction. Look up the Handshake Lemma or [Triangular numbers](https://en.wikipedia.org/wiki/Triangular_number) for more details.
 
-- Q4. Suppose Bob receives a messages signed using a digital signature scheme with Alice’s secret signing key. Does it prove that Alice saw the message and chose to sign.
+- Q4. Suppose Bob receives a message signed using a digital signature scheme with Alice’s secret signing key. Does it prove that Alice saw the message and chose to sign.
     - No,  $K_a$ is long and difficult to remember, much less compute with. If a malicious party takes over Alice's PC, they might be able to forge Alice's signature. 
 
 - Q6. Suppose a chosen-ciphertext attacker cannot recover the secret decryption key for an encryption scheme. Does this mean the encryption scheme is secure?
@@ -47,8 +47,11 @@ You want to understand a paper on a new polynomial commitment scheme, but you’
 	- [Thor's Solution](https://github.com/thor314/uncloak-hw/tree/main/hw1)
 
 5. (a) What is a side channel attack?
+	- Any additional information that can be gathered from the design of an implementation, often cache and timing attacks, but also analysis on power consumption if the attack has access to hardware.
 
 5. (b) Is your cipher implementation constant time?
+	- The implementation above in Q4 is not constant time.
+> "On line 87, some values will be reducible modulo 26, while others will not: a sophisticated cryptanalyst would be able to exploit this timing difference. Besides this, I don't protect key information at all. This could be remedied by using the Secrecy and/or Zeroize libraries, which prevent key information from remaining in insecure memory. Cryptography Jean Phillipe Aumasson a list outlining these common issues and more https://github.com/veorq/cryptocoding#clean-memory-of-secret-data."
 
 ### Extras
 
