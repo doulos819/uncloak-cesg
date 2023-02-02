@@ -1,9 +1,14 @@
 [package]
-name = "week_8"
+name = "week_10"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
 path = "src/lib.rs"
+
+[dependencies]
+num-bigint = "0.4.3"
+num-traits = "0.2.15"
+
 
 

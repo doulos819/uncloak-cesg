@@ -1,24 +1,46 @@
-use week_8::gcd;
+use week_10::fast_power;
 use std::io;
+use num_bigint::BigInt;
+use num_traits::Zero;
 
 fn main() {
-    let mut a_str = String::new();
-    let mut b_str = String::new();
+    // Declare a new string to store the base value
+    let mut base_str = String::new();
 
-    println!("Enter value of a:");
-    io::stdin().read_line(&mut a_str).unwrap();
-    let a = a_str.trim().parse::<u64>().unwrap();
+    // Declare a new string to store the exponent value
+    let mut exponent_str = String::new();
 
-    println!("Enter value of b:");
-    io::stdin().read_line(&mut b_str).unwrap();
-    let b = b_str.trim().parse::<u64>().unwrap();
+    // Declare a new string to store the modulus value
+    let mut modulus_str = String::new();
 
-    println!("The gcd of {} and {} is: {}", a, b, gcd(a, b));
+    // Prompt the user to enter the base value
+    println!("Enter the base:");
+
+    // Read the user input into the `base_str` string
+    io::stdin().read_line(&mut base_str).unwrap();
+
+    // Parse the `base_str` string into a BigInt value
+    let base = BigInt::parse_bytes(base_str.trim().as_bytes(), 10).unwrap();
+
+    // Prompt the user to enter the exponent value
+    println!("Enter the exponent:");
+
+    // Read the user input into the `exponent_str` string
+    io::stdin().read_line(&mut exponent_str).unwrap();
+
+    // Parse the `exponent_str` string into a BigInt value
+    let exponent = BigInt::parse_bytes(exponent_str.trim().as_bytes(), 10).unwrap();
+
+    // Prompt the user to enter the modulus value
+    println!("Enter the modulus:");
+
+    // Read the user input into the `modulus_str` string
+    io::stdin().read_line(&mut modulus_str).unwrap();
+
+    // Parse the `modulus_str` string into a BigInt value
+    let modulus = BigInt::parse_bytes(modulus_str.trim().as_bytes(), 10).unwrap();
+
+    // Calculate and print the result of `fast_power` with the base, exponent, and modulus values
+    println!("The result is: {}", fast_power(base, exponent, modulus));
 }
 
-#[cfg(test)]
-fn test_gcd() {
-    assert_eq!(gcd(10, 15), 5);
-    assert_eq!(gcd(20, 30), 10);
-    assert_eq!(gcd(15, 20), 5);
-}
