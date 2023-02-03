@@ -1,6 +1,8 @@
 use std::ops::Mul;
 use num_bigint::BigInt;
 use num_traits::Zero;
+use std::convert::TryInto;
+
 
 pub fn fast_power(base: BigInt, mut exponent: BigInt, modulus: BigInt) -> BigInt {
     // Create a zero BigInt to compare the exponent to.
@@ -32,6 +34,44 @@ pub fn fast_power(base: BigInt, mut exponent: BigInt, modulus: BigInt) -> BigInt
     // Return the result.
     result
 }
+
+pub fn is_generator(g: &BigInt, prime: &BigInt) -> bool {
+    let zero = BigInt::zero();
+    let one = BigInt::from(1u8);
+    let mut seen = vec![];
+    let mut power = g.clone();
+
+    let prime_u32: u32 = match prime.try_into() {
+        Ok(val) => val,
+        Err(_) => return false,
+    };
+
+    for i in 1..prime_u32 {
+        power = (power.clone() * g.clone()) % prime.clone();
+        if power == one || seen.contains(&power) {
+            return false;
+        }
+        seen.push(power.clone());
+    }
+    true
+}
+
+pub fn find_generator(prime: &BigInt) -> Option<BigInt> {
+    let zero = BigInt::zero();
+    let one = BigInt::from(1u8);
+    let upper_bound = match (prime - 1u32).try_into() {
+        Ok(x) => x,
+        Err(_) => return None,
+    };
+    for i in 2..upper_bound {
+        let candidate = BigInt::from(i);
+        if is_generator(&candidate, &prime) {
+            return Some(candidate);
+        }
+    }
+    None
+}
+
 
 #[cfg(test)]
 mod tests {
