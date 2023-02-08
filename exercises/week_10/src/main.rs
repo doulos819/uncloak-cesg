@@ -43,7 +43,7 @@ fn main() {
     // // Calculate and print the result of `fast_power` with the base, exponent, and modulus values
     // println!("The result is: {}", fast_power(base, exponent, modulus));
 
-    println!("Enter a prime number: ");
+    println!("Enter a prime field to find a generator: ");
     let mut prime_input = String::new();
     io::stdin().read_line(&mut prime_input).unwrap();
     let prime: BigInt = prime_input.trim().parse().unwrap();

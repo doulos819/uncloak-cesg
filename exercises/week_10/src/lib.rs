@@ -42,23 +42,25 @@ pub fn is_generator(g: &BigInt, prime: &BigInt) -> bool {
         Ok(x) => x,
         Err(_) => return false,
     };
-    for _ in 1..upper_bound {
+    for _ in 1.. upper_bound {
         power = fast_power(g.clone(), power.clone(), prime.clone());
         if power == one || seen.contains(&power) {
             return false;
         }
         seen.push(power.clone());
+        println!("powers: {:?}", &power);
     }
     true
 }
 
 pub fn find_generator(prime: &BigInt) -> Option<BigInt> {
-    let upper_bound = match (prime - 1u32).try_into() {
+    let upper_bound = match (prime).try_into() {
         Ok(x) => x,
         Err(_) => return None,
     };
     for i in 2..upper_bound {
         let candidate = BigInt::from(i);
+        println!("CANDIDATE: {:?}", &candidate);
         if is_generator(&candidate, &prime) {
             return Some(candidate);
         }
